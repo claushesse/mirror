@@ -69,7 +69,7 @@ var alto = window.innerHeight;
 /*
   The size of generated ASCII graphics expressed in characters and lines.
 */
-var asciiart_width = 75; var asciiart_height = 85;
+var asciiart_width = 65; var asciiart_height = 75;
 
 /*
   Video capture device.
@@ -154,7 +154,7 @@ function setup() {
     sketch.
   */
   textAlign(CENTER, CENTER); textFont('monospace', 8); textStyle(NORMAL);
-  noStroke(); fill(255);
+  noStroke(); fill(0,255,0);
   /*
     Finally we set the framerate.
   */
