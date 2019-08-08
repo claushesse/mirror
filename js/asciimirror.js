@@ -154,7 +154,7 @@ function setup() {
     sketch.
   */
   textAlign(CENTER, CENTER); textFont('monospace', 8); textStyle(NORMAL);
-  noStroke(); fill(0,255,0);
+  noStroke(); fill(255);
   /*
     Finally we set the framerate.
   */
