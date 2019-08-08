@@ -69,7 +69,7 @@ var alto = window.innerHeight;
 /*
   The size of generated ASCII graphics expressed in characters and lines.
 */
-var asciiart_width = 65; var asciiart_height = 75;
+var asciiart_width = 45; var asciiart_height = 65;
 
 /*
   Video capture device.
