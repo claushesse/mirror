@@ -103,10 +103,10 @@ function initCaptureDevice() {
     myCapture.size(window.width, window.height);
     myCapture.elt.setAttribute('playsinline', '');
     myCapture.hide();
-    console.log(
+    /*console.log(
       '[initCaptureDevice] capture ready. Resolution: ' +
       myCapture.width + ' ' + myCapture.height
-    );
+    );*/
   } catch(_err) {
     console.log('[initCaptureDevice] capture error: ' + _err);
   }
@@ -120,7 +120,7 @@ function initCaptureDevice() {
 }*/
 
 function setup() {
-  console.log(ancho, alto);
+  //console.log(ancho, alto);
   
   createCanvas(ancho, alto); // we need some space...
   initCaptureDevice(); // and access to the camera
@@ -268,11 +268,11 @@ function mouseReleased() {
 */
 typeArray2d = function(_arr2d, _dst, _x, _y, _w, _h) {
   if(_arr2d === null) {
-    console.log('[typeArray2d] _arr2d === null');
+    //console.log('[typeArray2d] _arr2d === null');
     return;
   }
   if(_arr2d === undefined) {
-    console.log('[typeArray2d] _arr2d === undefined');
+    //console.log('[typeArray2d] _arr2d === undefined');
     return;
   }
   switch(arguments.length) {
@@ -280,9 +280,7 @@ typeArray2d = function(_arr2d, _dst, _x, _y, _w, _h) {
     case 4: _w = width; _h = height; break;
     case 6: /* nothing to do */ break;
     default:
-      console.log(
-        '[typeArray2d] bad number of arguments: ' + arguments.length
-      );
+      //console.log('[typeArray2d] bad number of arguments: ' + arguments.length);
       return;
   }
   /*
@@ -292,20 +290,20 @@ typeArray2d = function(_arr2d, _dst, _x, _y, _w, _h) {
     JavaScript.
   */
   if(_dst.canvas === null) {
-    console.log('[typeArray2d] _dst.canvas === null');
+    //console.log('[typeArray2d] _dst.canvas === null');
     return;
   }
   if(_dst.canvas === undefined) {
-    console.log('[typeArray2d] _dst.canvas === undefined');
+    //console.log('[typeArray2d] _dst.canvas === undefined');
     return;
   }
   var temp_ctx2d = _dst.canvas.getContext('2d');
   if(temp_ctx2d === null) {
-    console.log('[typeArray2d] _dst canvas 2d context is null');
+    //console.log('[typeArray2d] _dst canvas 2d context is null');
     return;
   }
   if(temp_ctx2d === undefined) {
-    console.log('[typeArray2d] _dst canvas 2d context is undefined');
+    //console.log('[typeArray2d] _dst canvas 2d context is undefined');
     return;
   }
   var dist_hor = _w / _arr2d.length;
