@@ -138,7 +138,7 @@ function setup() {
   var goFS = document.getElementById("goFS");
   goFS.addEventListener("click", function() {
       toggleFullScreen();
-      goFS.style.display = "inline";
+      goFS.style.display = "none";
   }, false);
 
   function toggleFullScreen() {
