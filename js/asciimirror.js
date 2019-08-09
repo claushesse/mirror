@@ -140,6 +140,10 @@ function setup() {
       toggleFullScreen();
   }, false);
 
+  goF5.addEventListener('touchstart', function(){
+        goFS.style.display = "none";    
+  });
+
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
         document.body.requestFullscreen();
