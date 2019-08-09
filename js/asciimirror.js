@@ -137,7 +137,6 @@ function setup() {
 
   var goFS = document.getElementById("goFS");
 
-  goFS.addEventListener('touchstart', function() {goFS.style.display = "none"; document.body.requestFullscreen();});
   goFS.addEventListener("click", function() {toggleFullScreen();}, false);
 
   function toggleFullScreen() {
@@ -151,7 +150,7 @@ function setup() {
    if((window.fullScreen) ||
    (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
     console.log("estoy fullscreeneado");
-    //goFS.style.display = "none";
+    goFS.style.display = "none";
    } else {
     console.log("ya no estoy fullscreeneado");
     goFS.style.display = "inline";
