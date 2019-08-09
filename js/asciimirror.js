@@ -66,10 +66,11 @@ var myAsciiArt;
 var ancho = window.innerWidth;
 var alto = window.innerHeight;
 
+
 /*
   The size of generated ASCII graphics expressed in characters and lines.
 */
-var asciiart_width = 45; var asciiart_height = 65;
+var asciiart_width = 120; var asciiart_height = 90;
 
 /*
   Video capture device.
@@ -97,6 +98,9 @@ var showOryginalImageFlag = false;
 /*
   Here we are trying to get access to the camera.
 */
+
+
+
 function initCaptureDevice() {
   try {
     myCapture = createCapture(VIDEO);
@@ -159,10 +163,15 @@ function setup() {
     Finally we set the framerate.
   */
   frameRate(30);
-  
 }
 
+
 function draw() {
+  asciiart_width = int((mouseX - 0) * (110 - 5) / (window.width - 0) + 5);
+  asciiart_height = int((mouseY - 0) * (90 - 5) / (window.height - 0) + 5);
+
+  gfx = createGraphics(asciiart_width, asciiart_height);
+
   if(myCapture !== null && myCapture !== undefined) { // safety first
     background(0);
     /*
