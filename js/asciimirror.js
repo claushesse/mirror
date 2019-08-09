@@ -136,13 +136,12 @@ function setup() {
   }, false);*/
 
   var goFS = document.getElementById("goFS");
+
   goFS.addEventListener("click", function() {
       toggleFullScreen();
   }, false);
 
-  goF5.addEventListener('touchstart', function(){
-        goFS.style.display = "none";    
-  });
+  goF5.addEventListener('touchstart', _ => goFS.style.display = "none")
 
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
