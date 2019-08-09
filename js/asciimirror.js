@@ -156,7 +156,7 @@ function setup() {
     //goFS.style.display = "none";
    } else {
     console.log("ya no estoy fullscreeneado");
-    goFS.style.display = "inline";
+    //goFS.style.display = "inline";
    }
   });
 
