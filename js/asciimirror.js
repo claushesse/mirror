@@ -138,7 +138,6 @@ function setup() {
   var goFS = document.getElementById("goFS");
   goFS.addEventListener("click", function() {
       toggleFullScreen();
-      goFS.style.display = "none";
   }, false);
 
   function toggleFullScreen() {
@@ -151,7 +150,8 @@ function setup() {
   document.addEventListener("fullscreenchange", function() {
    if((window.fullScreen) ||
    (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
-      console.log("estoy fullscreeneado");
+    console.log("estoy fullscreeneado");
+    goFS.style.display = "none";
    } else {
     console.log("ya no estoy fullscreeneado");
     goFS.style.display = "inline";
