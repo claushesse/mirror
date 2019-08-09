@@ -147,14 +147,22 @@ function setup() {
   }
 
   document.addEventListener("fullscreenchange", function() {
-   if((window.fullScreen) ||
+   if (document.fullscreenElement) {
+        goFS.style.display = "none";
+    } 
+
+    if (!document.fullscreenElement) {
+        goFS.style.display = "inline";
+    } 
+
+   /*if((window.fullScreen) ||
    (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
     console.log("estoy fullscreeneado");
     goFS.style.display = "none";
    } else {
     console.log("ya no estoy fullscreeneado");
-    goFS.style.display = "inline";
-   }
+    //goFS.style.display = "inline";
+   }*/
   });
 
   /*
