@@ -137,10 +137,8 @@ function setup() {
 
   var goFS = document.getElementById("goFS");
 
-  goFS.addEventListener("click", function() {
-      toggleFullScreen();
-      this.addEventListener('touchstart', _ => this.style.display = "none");
-  }, false);
+  goFS.addEventListener('touchstart', _ => goFS.style.display = "none");
+  goFS.addEventListener("click", function() {toggleFullScreen();}, false);
 
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
@@ -156,7 +154,7 @@ function setup() {
     //goFS.style.display = "none";
    } else {
     console.log("ya no estoy fullscreeneado");
-    //goFS.style.display = "inline";
+    goFS.style.display = "inline";
    }
   });
 
