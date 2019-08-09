@@ -137,7 +137,7 @@ function setup() {
 
   var goFS = document.getElementById("goFS");
 
-  goFS.addEventListener('touchstart', _ => goFS.style.display = "none", toggleFullScreen());
+  goFS.addEventListener('touchstart', function() {goFS.style.display = "none"; toggleFullScreen();}, false);
   goFS.addEventListener("click", function() {toggleFullScreen();}, false);
 
   function toggleFullScreen() {
