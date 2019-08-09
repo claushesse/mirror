@@ -142,16 +142,16 @@ function setup() {
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
         document.body.requestFullscreen();
-        goFS.style.display = "none";
+        //goFS.style.display = "none";
     } 
   }
 
   document.addEventListener("fullscreenchange", function() {
-   if (document.fullscreenElement) {
+   if (document.fullscreenElement != null) {
         goFS.style.display = "none";
     } 
 
-    if (!document.fullscreenElement) {
+    if (document.fullscreenElement == null) {
         goFS.style.display = "inline";
     } 
 
