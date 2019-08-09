@@ -112,7 +112,7 @@ function initCaptureDevice() {
       myCapture.width + ' ' + myCapture.height
     );*/
   } catch(_err) {
-    console.log('[initCaptureDevice] capture error: ' + _err);
+    /*console.log('[initCaptureDevice] capture error: ' + _err);*/
   }
 }
 
@@ -128,6 +128,35 @@ function setup() {
   
   createCanvas(ancho, alto); // we need some space...
   initCaptureDevice(); // and access to the camera
+  canvas.setAttribute("id", "canvasId");
+
+  /*var goFS = document.getElementById("goFS");
+  goFS.addEventListener("click", function() {
+      document.body.requestFullscreen();
+  }, false);*/
+
+  var goFS = document.getElementById("goFS");
+  goFS.addEventListener("click", function() {
+      toggleFullScreen();
+  }, false);
+
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+        document.body.requestFullscreen();
+        goFS.style.display = "none";
+    } 
+  }
+
+  document.addEventListener("fullscreenchange", function() {
+   if((window.fullScreen) ||
+   (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
+      console.log("estoy fullscreeneado");
+   } else {
+    console.log("ya no estoy fullscreeneado");
+    goFS.style.display = "inline";
+   }
+  });
+
   /*
     In this particular case the gfx helper should have dimensions the same as
     the target graphic.
