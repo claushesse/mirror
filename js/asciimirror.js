@@ -130,11 +130,6 @@ function setup() {
   initCaptureDevice(); // and access to the camera
   canvas.setAttribute("id", "canvasId");
 
-  /*var goFS = document.getElementById("goFS");
-  goFS.addEventListener("click", function() {
-      document.body.requestFullscreen();
-  }, false);*/
-
   var goFS = document.getElementById("goFS");
 
   goFS.addEventListener("click", function() {toggleFullScreen();}, false);
@@ -154,15 +149,6 @@ function setup() {
     if (document.fullscreenElement == null) {
         goFS.style.display = "inline";
     } 
-
-   /*if((window.fullScreen) ||
-   (window.innerWidth == screen.width && window.innerHeight == screen.height)) {
-    console.log("estoy fullscreeneado");
-    goFS.style.display = "none";
-   } else {
-    console.log("ya no estoy fullscreeneado");
-    //goFS.style.display = "inline";
-   }*/
   });
 
   /*
