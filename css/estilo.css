@@ -13,8 +13,8 @@
 }
 
 .button:hover{
-	background-color: white;
-	color: black;
+	background-color: #008CBA;
+	color: white;
 }
 
 .body {

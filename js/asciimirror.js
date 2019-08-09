@@ -128,6 +128,7 @@ function setup() {
   
   createCanvas(ancho, alto); // we need some space...
   initCaptureDevice(); // and access to the camera
+  
   canvas.setAttribute("id", "canvasId");
 
   var goFS = document.getElementById("goFS");
@@ -137,7 +138,6 @@ function setup() {
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
         document.body.requestFullscreen();
-        //goFS.style.display = "none";
     } 
   }
 
